@@ -38,6 +38,32 @@ g++ 00_hello_world.cpp -o hello
 ./hello
 ```
 
+## 🚀 Compilazione automatica con Makefile
+
+Per compilare tutti i file C++ in modo automatico e ordinato:
+
+```bash
+make
+```
+
+Gli eseguibili verranno creati nella cartella `bin/`.
+Per pulire la cartella degli eseguibili:
+
+```bash
+make clean
+```
+
+## 📦 Struttura della repository
+
+- Tutti i sorgenti C++ sono in `src/`
+- Gli eseguibili sono in `bin/`
+- Materiale avanzato e PDF in `Corso Avanzato Federico Busato/`
+
+## 🛠️ Dipendenze
+
+- Compilatore C++ (g++ consigliato)
+- Make (per la compilazione automatica)
+
 ## 📖 Struttura dei File
 
 Ogni file contiene:
@@ -48,43 +74,9 @@ Ogni file contiene:
 
 ## 🎯 Obiettivi di Apprendimento
 
-### ✅ **Completato:**
-- [x] Sintassi base e primi programmi
-- [x] Variabili e tipi di dato
-- [x] Input/Output e gestione buffer
-- [x] Operatori e espressioni
-- [x] Strutture condizionali (if, switch)
-- [x] Cicli e controllo flusso
-- [x] Array e gestione memoria di base
-- [x] Funzioni e modularità
-- [x] Stringhe e manipolazione testo
-- [x] Puntatori e riferimenti
-
-### 🔄 **In Corso:**
-- [ ] Programmazione orientata agli oggetti
-- [ ] Gestione memoria avanzata
-- [ ] Template e programmazione generica
-- [ ] STL (Standard Template Library)
-
-### 📝 **Da Fare:**
-- [ ] Gestione eccezioni
-- [ ] File I/O
-- [ ] Multithreading
-- [ ] Design patterns
-
 ## 📚 Riferimenti
 
 - [Corso Avanzato Federico Busato](./Corso%20Avanzato%20Federico%20Busato/)
 - [Documentazione C++ ufficiale](https://cppreference.com/)
 - [Modern C++ Guidelines](https://isocpp.github.io/CppCoreGuidelines/)
 
-## 💡 Note Personali
-
-- **Differenze principali con C**: Classi, namespace, STL, reference, overloading
-- **Compilatore preferito**: g++ (GCC)
-- **Standard utilizzato**: C++17/C++20
-- **Focus**: Codice pulito, best practices, performance
-
----
-
-⭐ *Repository in continuo aggiornamento mentre imparo nuovi concetti!*

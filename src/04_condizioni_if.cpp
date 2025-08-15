@@ -92,25 +92,8 @@ int main() {
     
     cout << "\n=== ESEMPI PRATICI ===" << endl;
     
-    // Esempio 1: Calcolatrice semplice
-    char operazione = '+';
-    int num1 = 15, num2 = 7;
     
-    if (operazione == '+') {
-        cout << num1 << " + " << num2 << " = " << (num1 + num2) << endl;
-    } else if (operazione == '-') {
-        cout << num1 << " - " << num2 << " = " << (num1 - num2) << endl;
-    } else if (operazione == '*') {
-        cout << num1 << " * " << num2 << " = " << (num1 * num2) << endl;
-    } else if (operazione == '/') {
-        if (num2 != 0) {  // Controllo divisione per zero!
-            cout << num1 << " / " << num2 << " = " << (num1 / num2) << endl;
-        } else {
-            cout << "Errore: divisione per zero!" << endl;
-        }
-    }
-    
-    // Esempio 2: Controllo password
+    // Controllo password
     string password = "ciao123";
     
     if (password.length() < 6) {
@@ -123,29 +106,3 @@ int main() {
     
     return 0;
 }
-
-/*
-REGOLE IF:
-- Condizione sempre tra parentesi: if (condizione)
-- Corpo tra graffe {} (opzionali per una sola istruzione)
-- else e else if sono opzionali
-
-OPERATORI DI CONFRONTO:
-- == uguale (NON = che è assegnamento!)
-- != diverso
-- < minore
-- > maggiore
-- <= minore o uguale
-- >= maggiore o uguale
-
-OPERATORI LOGICI:
-- && AND (entrambi veri)
-- || OR (almeno uno vero)  
-- ! NOT (inverte)
-
-TIPS:
-- Usa sempre {} anche per una sola istruzione (chiarezza)
-- Attenzione: = assegna, == confronta
-- Per char usa apici singoli: 'A'
-- Per string usa apici doppi: "ciao"
-*/

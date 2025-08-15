@@ -4,6 +4,51 @@
 #include <iostream>
 using namespace std;
 
+/*
+==================== RIFERIMENTI IN C++ =====================
+
+Cos'è un riferimento?
+Un riferimento è come un puntatore ad una variabile con:
+- il vantaggio di non avere la sintassi complessa dei puntatori
+- il limite di non poter essere null (quindi non rischi di accedere a memoria non inizializzata)
+- Ma che non possono essere riassegnati, un riferimento è legato a una sola variabile.
+
+Sintassi: int& ref = variabile;
+
+Esempio pratico:
+void incrementa(int& x) {
+    x++; // Modifica la variabile originale!
+}
+
+int a = 5;
+incrementa(a); // Ora a vale 6
+
+La vera differenza è nella sicurezza e nella sintassi, non nell’efficienza. 
+Puoi usarli tranquillamente senza preoccuparti di rallentamenti o overhead!
+• il limite di non poter essere null (quindi non rischi di accedere a memoria non inizializzata)
+• Non possono essere “dangling”
+============================================================*/
+
+// ALLOCAZIONE E DEALLICAZIONE DINAMICA:
+// in c++ si usa new e delete per allocare e deallocare memoria dinamica
+// es: int* p = new int(42);  // allocazione di un intero, 42 è il valore assegnato 
+//     delete p;              // deallocazione
+
+// Se vuoi allocare uno spazio per 10 interi (tutti inizializzati a zero):
+// int* array = new int[10](); // crea un array di 10 interi, tutti a 0
+// delete[] array;             // libera la memoria
+
+// PROTOTIPI FUNZIONI USATE NEL MAIN
+void passaggioPerValore(int valore);
+void passaggioPerPuntatore(int* ptr);
+void passaggioPerRiferimento(int& ref);
+void scambia(int* a, int* b);
+int* trovaMassimo(int array[], int dimensione);
+
+
+#include <iostream>
+using namespace std;
+
 int main() {
     cout << "=== INDIRIZZI DI MEMORIA ===" << endl;
     
@@ -22,7 +67,7 @@ int main() {
     int* puntatore;  // Puntatore a intero (non inizializzato!)
     
     // INIZIALIZZAZIONE PUNTATORE
-    puntatore = &numero;  // puntatore "punta" all'indirizzo di numero
+    puntatore = &numero;  // per prendere l'indirizzo di un valore
     
     cout << "Valore della variabile: " << numero << endl;        // 42
     cout << "Indirizzo nella variabile puntatore: " << puntatore << endl;  // indirizzo
@@ -76,6 +121,13 @@ int main() {
     
     int originale = 25;
     int& riferimento = originale;  // riferimento è un "alias" di originale
+    // RIFERIMENTI (C++)
+    // Un riferimento è un "alias" di una variabile già esistente.
+    // Sintassi: tipo& nome = variabile;
+    // - Non può essere null
+    // - Non può cambiare a cosa si riferisce dopo l'inizializzazione
+    // - Si comporta come la variabile originale: ogni modifica al riferimento modifica l'originale
+    // - Più sicuro e semplice dei puntatori per il passaggio di parametri
     
     cout << "originale: " << originale << endl;           // 25
     cout << "riferimento: " << riferimento << endl;       // 25
@@ -197,76 +249,3 @@ int* trovaMassimo(int array[], int dimensione) {
     
     return ptr_max;  // Ritorna il puntatore al massimo
 }
-
-/*
-PUNTATORI:
-
-SINTASSI:
-- int* ptr;          // Dichiarazione
-- ptr = &variabile;  // Inizializzazione con indirizzo
-- *ptr;              // Dereferenziazione (accede al valore)
-- &variabile;        // Operatore "indirizzo di"
-
-ARITMETICA:
-- ptr + 1: prossimo elemento (non prossimo byte!)
-- ptr++: avanza al prossimo elemento
-- ptr - ptr2: distanza tra puntatori
-
-RIFERIMENTI:
-
-SINTASSI:
-- int& ref = variabile;  // Deve essere inizializzato!
-- ref = valore;          // Assegna valore alla variabile riferita
-
-DIFFERENZE PRINCIPALI:
-
-PUNTATORI:
-- Possono essere null
-- Possono cambiare a cosa puntano
-- Hanno un proprio indirizzo
-- Aritmetica dei puntatori
-- Dereferenziazione esplicita (*)
-
-RIFERIMENTI:
-- Non possono essere null
-- Sempre lo stesso oggetto
-- Stesso indirizzo della variabile riferita
-- Nessuna aritmetica
-- Dereferenziazione automatica
-
-ALLOCAZIONE MEMORIA:
-
-STACK (automatica):
-- Variabili locali
-- Gestita automaticamente
-- Veloce
-- Limitata in dimensione
-
-HEAP (dinamica):
-- new/delete
-- Gestita manualmente
-- Più lenta
-- Dimensione maggiore
-- RISCHIO memory leak se non si fa delete!
-
-QUANDO USARE:
-
-PUNTATORI:
-- Strutture dati dinamiche
-- Array di dimensione variabile
-- Quando serve null
-- Callback e funzioni
-
-RIFERIMENTI:
-- Passaggio parametri (evita copia)
-- Alias per variabili
-- Quando non serve null
-- Overloading operatori
-
-REGOLE SICUREZZA:
-- Inizializza sempre i puntatori
-- Controlla null prima di dereferenziare
-- delete ogni new
-- Non usare puntatori dopo delete
-- Usa nullptr invece di NULL
-*/

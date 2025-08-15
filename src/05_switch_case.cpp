@@ -158,57 +158,7 @@ int main() {
             cout << "Scelta non valida!" << endl;
     }
     
-    cout << "\n=== CONFRONTO IF vs SWITCH ===" << endl;
-    
-    int numero = 2;
-    
-    // Con IF-ELSE
-    if (numero == 1) {
-        cout << "IF: Uno" << endl;
-    } else if (numero == 2) {
-        cout << "IF: Due" << endl;
-    } else if (numero == 3) {
-        cout << "IF: Tre" << endl;
-    } else {
-        cout << "IF: Altro numero" << endl;
-    }
-    
-    // Con SWITCH (più pulito per valori discreti)
-    switch (numero) {
-        case 1:
-            cout << "SWITCH: Uno" << endl;
-            break;
-        case 2:
-            cout << "SWITCH: Due" << endl;
-            break;
-        case 3:
-            cout << "SWITCH: Tre" << endl;
-            break;
-        default:
-            cout << "SWITCH: Altro numero" << endl;
-    }
-    
-    return 0;
-}
-
 /*
-QUANDO USARE SWITCH:
-- Confronti con valori costanti (int, char, enum)
-- Molte alternative (più di 3-4)
-- Valori discreti, non intervalli
-
-QUANDO USARE IF:
-- Confronti con condizioni complesse (>, <, &&, ||)
-- Confronti con variabili
-- Intervalli di valori
-- Condizioni boolean
-
-REGOLE SWITCH:
-- Solo tipi: int, char, enum (NON float, string, bool)
-- Case deve essere valore COSTANTE
-- break è OBBLIGATORIO (senza continua al prossimo)
-- default è opzionale ma consigliato
-
 FALL-THROUGH:
 - Senza break, continua al case successivo
 - Utile per raggruppare casi simili

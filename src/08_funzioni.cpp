@@ -5,13 +5,20 @@
 using namespace std;
 
 // DICHIARAZIONE DI FUNZIONI (prototipi)
+
 void saluta();                           // Funzione senza parametri e senza return
 void salutaPersona(string nome);        // Funzione con parametro, senza return
+
+
 int somma(int a, int b);                 // Funzione con parametri e return
+double somma(double a, double b);        // Overload per double
+int somma(int a, int b, int c);          // Overload per tre parametri
+
 float calcolaMedia(float v1, float v2, float v3);
 int fattoriale(int n);
 void stampaArray(int arr[], int dimensione);
 bool isPrimo(int numero);
+int potenza(int base, int esponente = 2); // Parametro di default
 
 int main() {
     cout << "=== CHIAMATE DI FUNZIONI ===" << endl;
@@ -125,7 +132,7 @@ bool isPrimo(int numero) {
 }
 
 // FUNZIONE CON PARAMETRO DI DEFAULT (deve essere nel prototipo!)
-int potenza(int base, int esponente = 2) {  // Default: esponente = 2
+int potenza(int base, int esponente) {
     int risultato = 1;
     for (int i = 0; i < esponente; i++) {
         risultato *= base;
@@ -162,84 +169,3 @@ void scambia(int &a, int &b) {  // & = riferimento (modifica originale)
     a = b;
     b = temp;
 }
-
-// Esempio di utilizzo dello scambio (da chiamare in main se vuoi testare)
-void testScambio() {
-    int x = 10, y = 20;
-    cout << "Prima dello scambio: x=" << x << ", y=" << y << endl;
-    scambia(x, y);
-    cout << "Dopo lo scambio: x=" << x << ", y=" << y << endl;
-}
-
-// Funzione ricorsiva (chiama se stessa)
-int fibonacci(int n) {
-    if (n <= 1) {
-        return n;  // fibonacci(0)=0, fibonacci(1)=1
-    }
-    return fibonacci(n-1) + fibonacci(n-2);  // Chiamata ricorsiva
-}
-
-// Funzione per validare input
-int leggiInteroPositivo() {
-    int numero;
-    do {
-        cout << "Inserisci un numero intero positivo: ";
-        cin >> numero;
-        if (numero <= 0) {
-            cout << "Errore! Il numero deve essere positivo." << endl;
-        }
-    } while (numero <= 0);
-    return numero;
-}
-
-// Funzione per calcolare MCD (Massimo Comun Divisore)
-int mcd(int a, int b) {
-    while (b != 0) {
-        int resto = a % b;
-        a = b;
-        b = resto;
-    }
-    return a;
-}
-
-/*
-ANATOMIA DI UNA FUNZIONE:
-
-tipo_ritorno nome_funzione(tipo param1, tipo param2, ...) {
-    // corpo della funzione
-    return valore;  // se tipo_ritorno != void
-}
-
-COMPONENTI:
-- tipo_ritorno: int, float, bool, void (nessun ritorno)
-- nome_funzione: segue regole variabili
-- parametri: input della funzione
-- return: output della funzione (opzionale se void)
-
-PASSAGGIO PARAMETRI:
-- Per valore: copia il valore (int a)
-- Per riferimento: modifica l'originale (int &a)
-- Array: sempre per riferimento (puntatore)
-
-VANTAGGI FUNZIONI:
-- Riutilizzo codice
-- Modularity (divide et impera)
-- Testing più facile
-- Manutenzione semplificata
-- Leggibilità migliorata
-
-SCOPE (AMBITO):
-- Variabili locali: esistono solo dentro la funzione
-- Variabili globali: esistono ovunque (EVITARE!)
-- Parametri: sono locali alla funzione
-
-OVERLOADING:
-- Stesso nome, parametri diversi (numero o tipo)
-- Compilatore sceglie automaticamente quale usare
-- NON si può fare overload solo sul tipo di ritorno
-
-RICORSIONE:
-- Funzione che chiama se stessa
-- Serve un caso base per fermarsi
-- Utile per problemi che si riducono (fattoriale, fibonacci)
-*/

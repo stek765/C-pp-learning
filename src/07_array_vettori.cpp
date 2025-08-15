@@ -40,7 +40,7 @@ int main() {
     cout << endl;
     
     // CALCOLO DELLA DIMENSIONE
-    int dimensione = sizeof(numeri) / sizeof(numeri[0]);
+    int dimensione = sizeof(numeri) / sizeof(numeri[0]); // size dell'array / size del singolo elemento -> numero di elementi
     cout << "Dimensione array: " << dimensione << endl;
     
     // SOMMA TUTTI GLI ELEMENTI
@@ -95,9 +95,9 @@ int main() {
     cout << endl;
     cout << "Voto minimo: " << minimo << endl;
     cout << "Voto massimo: " << massimo << endl;
-    
-    cout << "\n=== ARRAY DI STRINGHE (CHAR) ===" << endl;
-    
+
+    cout << "\n=== STRINGHE ===" << endl;
+
     // STRINGA COME ARRAY DI CHAR
     char nome[] = "Mario";  // Automaticamente aggiunge '\0' alla fine
     char cognome[10] = "Rossi";  // 10 caratteri massimo
@@ -214,38 +214,4 @@ int main() {
     return 0;
 }
 
-/*
-CONCETTI CHIAVE ARRAY:
 
-DICHIARAZIONE:
-- tipo nome[dimensione]
-- tipo nome[] = {valori...}  (dimensione automatica)
-- tipo nome[dim] = {valori...}
-
-ACCESSO:
-- nome[indice] dove indice va da 0 a dimensione-1
-- ATTENZIONE: C++ non controlla i limiti! array[100] su array[5] = ERRORE!
-
-DIMENSIONE:
-- sizeof(array) / sizeof(array[0])
-- Funziona solo nell'ambito dove è dichiarato l'array
-
-LIMITI:
-- Dimensione fissa (determinata a compile-time)
-- Non si possono assegnare: array1 = array2 ❌
-- Non si possono confrontare: array1 == array2 ❌
-- Bisogna fare tutto manualmente con i cicli
-
-STRINGHE:
-- Array di char terminato con '\0'
-- "ciao" = {'c','i','a','o','\0'}
-
-MATRICI:
-- tipo nome[righe][colonne]
-- Accesso: nome[i][j]
-
-ALTERNATIVE MODERNE:
-- std::vector (dimensione dinamica)
-- std::array (dimensione fissa ma con funzioni)
-- std::string (per stringhe)
-*/

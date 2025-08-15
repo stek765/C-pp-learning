@@ -29,9 +29,10 @@ int main() {
     
     cout << "\n=== ACCESSO AI CARATTERI ===" << endl;
     
-    // ACCESSO TRAMITE INDICE
+    // ACCESSO TRAMITE INDICE (Mario)
     cout << "Prima lettera: " << nome[0] << endl;             // M
     cout << "Ultima lettera: " << nome[nome.length()-1] << endl; // o
+    // NUOVO RISPETTO A C (at, controlla i limiti dell'array)
     cout << "Con at(): " << nome.at(1) << endl;               // a (più sicuro)
     
     // MODIFICA CARATTERI
@@ -99,7 +100,7 @@ int main() {
     }
     
     // FIND CON CARATTERE
-    posizione = testo.find('è');
+    posizione = testo.find("è");
     cout << "Carattere 'è' alla posizione " << posizione << endl;
     
     // FIND DALLA FINE
