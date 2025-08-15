@@ -1,6 +1,6 @@
 # 🚀 C++ Learning Journey
 
-![C++ Logo](Corso%20Avanzato%20Federico%20Busato/other/cpp_logo.png)
+![C++ Logo](src/Corso%20Avanzato%20Federico%20Busato/other/cpp_logo.png)
 
 > "Ho scelto C++ perché è il linguaggio che unisce mondi che mi appassionano: matematica, fisica, grafica, firmware e programmazione low-level. 
 > Con C++ posso sviluppare competenze trasversali, creare software ad alte prestazioni e capire davvero cosa succede "sotto il cofano". 
