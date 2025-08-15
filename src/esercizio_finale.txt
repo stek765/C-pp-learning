@@ -1,0 +1,31 @@
+// ESERCIZIO FINALE C++ - Sviluppa un mini-gestionale completo
+
+Obiettivo:
+Realizza un programma C++ che gestisca una piccola rubrica di persone e animali domestici, usando i concetti fondamentali e avanzati visti nei 30 file.
+
+Requisiti minimi:
+1. Crea una classe `Persona` e una classe `Animale` (usa ereditarietà e polimorfismo se vuoi più tipi di animali).
+2. Usa costruttori, distruttori, operatori (operator=, operator<<) dove serve.
+3. Organizza il codice in più file (moduli, namespace, header/source se vuoi).
+4. Usa almeno una struct e un enum per gestire attributi o stati.
+5. Gestisci la memoria dinamica con smart pointer.
+6. Usa STL containers (vector, map) per memorizzare le persone e gli animali.
+7. Implementa funzioni template per operazioni generiche (es: ricerca, stampa).
+8. Gestisci input/output da file (lettura/scrittura della rubrica).
+9. Usa lambda e algoritmi STL per filtrare, ordinare o cercare.
+10. Gestisci eccezioni per input errati o file mancanti.
+11. Mostra esempi di move semantics e passaggio per riferimento.
+12. Implementa almeno un design pattern (Singleton per la rubrica, Factory per animali, ecc.).
+13. Usa thread per simulare operazioni in parallelo (es: salvataggio su file).
+14. Segui le best practice di stile e naming.
+15. Documenta il codice con commenti chiari.
+
+Extra:
+- Integra una libreria esterna (es: fmt per la stampa, se vuoi).
+- Usa un Makefile o CMake per compilare il progetto.
+- Profiling/ottimizzazione: misura i tempi di alcune operazioni.
+
+Consegna:
+Scrivi il programma in una cartella dedicata, con README e istruzioni per compilare ed eseguire. Ogni parte del codice deve mostrare chiaramente l’uso dei concetti richiesti.
+
+Buon lavoro!

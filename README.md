@@ -1,82 +1,34 @@
-# 📚 C++ Learning Journey
+# 🚀 C++ Learning Journey
 
-> 🚧 **Work in Progress** - Sto imparando C++ step by step!
+![C++ Logo](Corso%20Avanzato%20Federico%20Busato/other/cpp_logo.png)
 
-Questa repository contiene il mio percorso di apprendimento del C++, dal livello base ai concetti più avanzati.
+> "Ho scelto C++ perché è il linguaggio che unisce mondi che mi appassionano: matematica, fisica, grafica, firmware e programmazione low-level. 
+> Con C++ posso sviluppare competenze trasversali, creare software ad alte prestazioni e capire davvero cosa succede "sotto il cofano". 
+> È la base per chi vuole costruire videogiochi, simulazioni, applicazioni scientifiche, sistemi embedded e molto altro. 
+> Imparare C++ significa imparare a pensare da ingegnere del software!"
 
-## 📋 Indice dei File
+Questa repository raccoglie il mio percorso di studio, esperimenti e appunti pratici su C++.
 
-| File | Argomento | Status |
-|------|-----------|--------|
-| `00_hello_world.cpp` | Primo programma, print, compilazione | ✅ |
-| `01_variabili_tipi.cpp` | Variabili, tipi di dato, sizeof | ✅ |
-| `02_input_output.cpp` | cin, cout, getline, buffer | ✅ |
-| `03_operatori.cpp` | Operatori aritmetici, logici, confronto | ✅ |
-| `04_condizioni_if.cpp` | if, else, else if, operatore ternario | ✅ |
-| `05_switch_case.cpp` | switch-case, fall-through | ✅ |
-| `06_cicli_while_for.cpp` | while, do-while, for, break, continue | ✅ |
-| `07_array_vettori.cpp` | Array, matrici, ricerca | ✅ |
-| `08_funzioni.cpp` | Funzioni, parametri, overloading | ✅ |
-| `09_stringhe.cpp` | std::string, metodi, conversioni | ✅ |
-| `10_puntatori_riferimenti.cpp` | Puntatori, riferimenti, memoria | ✅ |
-| `11_classi_oggetti.cpp` | Classi, oggetti, costruttori | 🔄 TODO |
-| `12_ereditarieta.cpp` | Ereditarietà, polimorfismo | 📝 TODO |
-| `13_template.cpp` | Template, generics | 📝 TODO |
-| `14_stl_containers.cpp` | STL, vector, map, set | 📝 TODO |
+## ✨ Perché C++?
+- Potenza e controllo totale sulla macchina
+- Ottimo per progetti che richiedono prestazioni e efficienza
+- Usato in ambiti come videogiochi, simulazioni, robotica, firmware, grafica, calcolo scientifico
+- Permette di unire logica, creatività e tecnica
 
-## 🚀 Come Compilare ed Eseguire
-
+## 📦 Come usare questa repo
+Troverai esempi, esercizi e appunti pratici. Puoi usare il Makefile gia pronto:
 ```bash
-# Compilazione
-g++ nome_file.cpp -o eseguibile
+make  // genera gli eseguibili
 
-# Esecuzione  
-./eseguibile
-
-# Esempio:
-g++ 00_hello_world.cpp -o hello
-./hello
-```
-
-## 🚀 Compilazione automatica con Makefile
-
-Per compilare tutti i file C++ in modo automatico e ordinato:
-
-```bash
-make
-```
-
-Gli eseguibili verranno creati nella cartella `bin/`.
-Per pulire la cartella degli eseguibili:
-
-```bash
 make clean
 ```
 
-## 📦 Struttura della repository
+## 🏆 Esercizio Finale
+Trovi la consegna in `esercizio_finale.txt`: un mini-gestionale per mettere in pratica quasi tutti i concetti!
 
-- Tutti i sorgenti C++ sono in `src/`
-- Gli eseguibili sono in `bin/`
-- Materiale avanzato e PDF in `Corso Avanzato Federico Busato/`
+---
 
-## 🛠️ Dipendenze
+## ❕ Effective C++
+📖 Nella cartella `Effective C++/` troverai i miei appunti e riassunti dal libro "Effective C++" di Scott Meyers, un testo fondamentale per chi vuole scrivere codice C++ davvero efficace e professionale.
 
-- Compilatore C++ (g++ consigliato)
-- Make (per la compilazione automatica)
-
-## 📖 Struttura dei File
-
-Ogni file contiene:
-- **Commenti dettagliati** per ogni concetto
-- **Esempi pratici** funzionanti
-- **Sezione teorica** alla fine con riassunto
-- **Codice progressivo** dal semplice al complesso
-
-## 🎯 Obiettivi di Apprendimento
-
-## 📚 Riferimenti
-
-- [Corso Avanzato Federico Busato](./Corso%20Avanzato%20Federico%20Busato/)
-- [Documentazione C++ ufficiale](https://cppreference.com/)
-- [Modern C++ Guidelines](https://isocpp.github.io/CppCoreGuidelines/)
 
