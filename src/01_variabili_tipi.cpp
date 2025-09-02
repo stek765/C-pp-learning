@@ -39,6 +39,12 @@ int main() {
     cout << "double: " << sizeof(double) << " byte" << endl;
     cout << "char: " << sizeof(char) << " byte" << endl;
     
+    // AUTO TYPE
+    auto a = 5;          // int
+    auto b = 3.14;       // double
+    auto c = 'C';       // char
+    auto d = "Hello";   // const char*
+
     return 0;
 }
 
